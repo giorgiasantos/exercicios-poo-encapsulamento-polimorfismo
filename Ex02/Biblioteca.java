@@ -14,6 +14,7 @@ public abstract class Biblioteca {
         System.out.println("Você registrou um livro com o ISBN");
         this.isbn = isbn;
         System.out.println("ISBN: " + this.isbn);
+        System.out.println("---------------------------------");
 
     };
 
@@ -23,6 +24,7 @@ public abstract class Biblioteca {
         System.out.println("Você registrou um livro com o ISBN e título.");
         System.out.println("ISBN: " + this.isbn);
         System.out.println("Título: " + this.nome);
+        System.out.println("---------------------------------");
 
     };
 
@@ -34,6 +36,7 @@ public abstract class Biblioteca {
         System.out.println("ISBN: " + this.isbn);
         System.out.println("Título: " + this.nome);
         System.out.println("Gêneros: " + Arrays.toString(this.listaGeneros));
+        System.out.println("---------------------------------");
     }
 
     public void registrarLivro(int isbn, String nome, String[] listaGeneros, String pessoaAutora) {
@@ -46,6 +49,13 @@ public abstract class Biblioteca {
         System.out.println("Título: " + this.nome);
         System.out.println("Gêneros: " + Arrays.toString(this.listaGeneros));
         System.out.println("Pessoa Autora: " + this.pessoaAutora);
+        System.out.println("---------------------------------");
     };
 
+    @Override
+    public String toString() {
+        return "Biblioteca{" +
+                "listaGeneros=" + Arrays.toString(listaGeneros) +
+                '}';
+    }
 }
